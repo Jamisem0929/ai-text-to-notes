@@ -1,0 +1,31 @@
+POST http://localhost:8080/notes
+Content-Type: application/json
+
+{
+  "title": "Parking Spot",
+  "content": "C17"
+}
+
+###
+
+PUT http://localhost:8080/notes/1
+Content-Type: application/json
+
+{
+  "title": "New Parking Spot",
+  "content": "B22"
+}
+###
+
+GET http://localhost:8080/notes
+
+###
+
+GET http://localhost:8080/notes/1
+
+
+###
+
+DELETE http://localhost:8080/notes/1
+
+
