@@ -9,4 +9,9 @@ public class HelloController {
     public String hello() {
         return "AI Notes server is running";
     }
+    @GetMapping("/note")
+    public Note note() {
+       Note note = new  Note(1, "CS Exam", "Study recursion, linked lists, and Big O");
+       return note;
+    }
 }

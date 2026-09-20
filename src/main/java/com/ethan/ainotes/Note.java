@@ -10,5 +10,14 @@ public class Note {
         this.title = title;
         this.content = content;
     }
+    public int getId(){
+        return this.id;
+    }
+    public String getTitle(){
+        return this.title;
+    }
+    public String getContent(){
+        return this.content;
+    }
 
 }
