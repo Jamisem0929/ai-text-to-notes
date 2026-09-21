@@ -1,16 +1,26 @@
 package com.ethan.ainotes;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Note {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     private String title;
     private String content;
+    protected Note(){
+    }
 
-    public Note(int id, String title, String content){
-        this.id = id;
+    public Note(String title, String content){
         this.title = title;
         this.content = content;
     }
-    public int getId(){
+    public Integer getId(){
         return this.id;
     }
     public String getTitle(){

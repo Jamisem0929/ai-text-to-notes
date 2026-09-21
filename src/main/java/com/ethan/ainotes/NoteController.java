@@ -1,5 +1,6 @@
 package com.ethan.ainotes;
 
+import java.util.List;
 import java.util.ArrayList;
 
 import org.springframework.http.ResponseEntity;
@@ -27,7 +28,7 @@ public class NoteController {
     }
 
     @GetMapping("/notes")
-    public ArrayList<Note> getNotes() {
+    public List<Note> getNotes() {
         return noteService.getNotes();
     }
 

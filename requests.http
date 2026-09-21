@@ -1,31 +1,44 @@
+### Create a note
 POST http://localhost:8080/notes
 Content-Type: application/json
 
 {
-  "title": "Parking Spot",
-  "content": "C17"
+  "title": "Database Test",
+  "content": "This note should persist"
 }
 
 ###
 
-PUT http://localhost:8080/notes/1
-Content-Type: application/json
-
-{
-  "title": "New Parking Spot",
-  "content": "B22"
-}
-###
-
+### Get all notes
 GET http://localhost:8080/notes
 
 ###
 
-GET http://localhost:8080/notes/1
-
+### Get note by ID
+GET http://localhost:8080/notes/2
 
 ###
 
-DELETE http://localhost:8080/notes/1
+### Update note
+PUT http://localhost:8080/notes/2
+Content-Type: application/json
 
+{
+  "title": "Updated Database Test",
+  "content": "This note was updated successfully"
+}
 
+###
+
+### Get updated note
+GET http://localhost:8080/notes/2
+
+###
+
+### Delete note
+DELETE http://localhost:8080/notes/2
+
+###
+
+### Confirm deleted note returns 404
+GET http://localhost:8080/notes/2
