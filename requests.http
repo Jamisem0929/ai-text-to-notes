@@ -1,44 +1,12 @@
-### Create a note
-POST http://localhost:8080/notes
+### Send raw message
+POST http://localhost:8080/messages
 Content-Type: application/json
 
 {
-  "title": "Database Test",
-  "content": "This note should persist"
+  "message": "Remember that Alex recommended Interstellar."
 }
 
 ###
 
-### Get all notes
+### Verify the message became a saved note
 GET http://localhost:8080/notes
-
-###
-
-### Get note by ID
-GET http://localhost:8080/notes/2
-
-###
-
-### Update note
-PUT http://localhost:8080/notes/2
-Content-Type: application/json
-
-{
-  "title": "Updated Database Test",
-  "content": "This note was updated successfully"
-}
-
-###
-
-### Get updated note
-GET http://localhost:8080/notes/2
-
-###
-
-### Delete note
-DELETE http://localhost:8080/notes/2
-
-###
-
-### Confirm deleted note returns 404
-GET http://localhost:8080/notes/2
